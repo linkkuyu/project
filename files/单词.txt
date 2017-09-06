@@ -1,0 +1,28 @@
+argument 参数
+multi 多
+process 进程
+random 随机
+invalid 无效的
+syntax 语法
+interrupt 中断
+async 异步
+apply 申请
+callable 调用
+function 函数
+attribute 属性
+Queue 队列
+
+进程消耗内存资源，线程消耗cpu资源
+
+stream 流
+performance 性能
+response 响应
+request 请求
+
+HTTP请求方式
+GET  请求数据
+POST  修改数据
+PUT  保存数据
+DELETE  删除
+OPTION  询问服务器的某种支持特性
+HEAD  返回报文头
