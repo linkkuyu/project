@@ -1,12 +1,47 @@
 /home/app/.local/bin/virtualenvwrapper.sh
 
+
+GET / HTTP/1.1
+Host: www.baidu.com
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.78 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.8
+Cookie: BAIDUID=D927E9760A4F6CB5FB4FCDA4555DE919:FG=1; BIDUPSID=D927E9760A4F6CB5FB4FCDA4555DE919; PSTM=1500568676; __cfduid=d07c816953becf7d6b6926a558cd6ff5f1500652901; BDUSS=B-fi1nOWdGa3JEWHdweWlEUjBwUFRaN3VRVUtRY2c4ODFqaWhRLTF0U35iTUpaTVFBQUFBJCQAAAAAAAAAAAEAAADT2t5ov-Ff0-oAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAL~fmlm~35pZd1; shifen[66665278799_68578]=1504272468; BCLID=8654057236270497475; BDSFRCVID=yGFsJeC62ZSzX2RZmfrD2MKLHeyPNz7TH6aokKltmzR6I8SMnayHEG0Pqx8g0KubhiF_ogKK0eOTHk7P; H_BDCLCKID_SF=tJPe_C8btCK3fnTkb-nbKIC-5fT8547yHD7yWCvX3hQ5OR5Jj65A0nIRDR5z245H3nruahRd54Tm84F63MA--t4fyUvJ2RTNJeKObh68K4T1sq0x0bQWe-bQypoaaPclXKOMahkM5l7xObk6056jK4JKDNuHJ63P; BDRCVFR[feWj1Vr5u3D]=I67x6TjHwwYf0; BD_CK_SAM=1; PSINO=5; cflag=15%3A3; BD_HOME=1; H_PS_PSSID=1436_21083_18560_20692; BD_UPN=123353
+Name
+ 
+
+HTTP/1.1 200 OK
+Bdpagetype: 2
+Bdqid: 0xba2e93270001d1c1
+Bduserid: 1759435475
+Cache-Control: private
+Connection: Keep-Alive
+Content-Encoding: gzip
+Content-Type: text/html;charset=utf-8
+Date: Sat, 02 Sep 2017 03:53:00 GMT
+Expires: Sat, 02 Sep 2017 03:53:00 GMT
+Server: BWS/1.1
+Set-Cookie: BDSVRTM=309; path=/
+Set-Cookie: BD_HOME=1; path=/
+Set-Cookie: H_PS_PSSID=1436_21083_18560_20692; path=/; domain=.baidu.com
+Strict-Transport-Security: max-age=172800
+X-Ua-Compatible: IE=Edge,chrome=1
+Transfer-Encoding: chunked
+
+query string 查询字符串  ？key1=value1&key2=value2&key2=value3
+
+
 django 
 
 虚拟环境： mkvirtualenv ,rmvirtualenv ,workon ,deactive
 	pip list ,pip install 
 
 django命令：django-admin startproject
-	添加应用 django manage.py startapp
+	添加应用 python manage.py startapp
 	在setting文件中注册添加的应用 （INSTALLED_APPS）中添加
 	编写模型类，models.py
 	生成一个迁移文件 python manage.py makemigration
@@ -19,8 +54,35 @@ admin的使用admin.py
 
 管理器和模型类
 
+把管理器的对象作为模型类的属性
 管理器是模型类的属性
 
-模型类通过管理器来查询修改数据
+模型类通过管理器来查询修改数据，通过管理器来映射到数据库中的表
+example:
+先定义模型类，然后定义管理器的类，再把管理器的类作为模型类的一个属性
+
+	class BookInfoManager(models.Manager):
+	    def get_queryset(self):
+		return super(BookInfoManager, self).get_queryset().filter(isDelet=False)
+
+	    def create(cls, btitle, bput_date):
+		b = BookInfo()
+		b.btitle = btitle
+		b.bput_date = bput_date
+		b.bread = 0
+		b.bcommet = 0
+		b.isdelet = False
+		return b
+
+	class BookInfo(models.Model):
+	    btitle = models.CharField(max_length=20)
+	    bput_date = models.DateTimeField(db_column='pub_date')
+	    bread = models.IntegerField(default=0)
+	    bcommet = models.IntegerField(null=False)
+	    isDelet = models.BooleanField(default=False)
+	    class Meta:
+		db_table = 'bookinfo'
+	    books1 = models.Manager()
+	    books2 = BookInfoManager()
 	
 

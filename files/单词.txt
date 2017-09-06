@@ -26,3 +26,9 @@ PUT  保存数据
 DELETE  删除
 OPTION  询问服务器的某种支持特性
 HEAD  返回报文头
+python interpreter python解释器
+not defined 没有定义
+
+
+
+

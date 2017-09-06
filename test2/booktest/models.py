@@ -1,13 +1,15 @@
+#coding:utf-8
+# Create your models here.
 from django.db import models
 
-
-# Create your models here.
 class BookInfoManager(models.Manager):
     def get_queryset(self):
         return super(BookInfoManager, self).get_queryset().filter(isDelet=False)
 
-    def create(cls, btitle, bput_date):
-        b = BookInfo()
+    def create(self, btitle, bput_date):
+        #b = BookInfo()
+        b = self.model()
+        print(str(b))
         b.btitle = btitle
         b.bput_date = bput_date
         b.bread = 0
@@ -23,6 +25,7 @@ class BookInfo(models.Model):
     isDelet = models.BooleanField(default=False)
     class Meta:
         db_table = 'bookinfo'
+        """当定义模型类时没有指定管理器，则Django会为模型类提供一个名为objects的管理器"""
     books1 = models.Manager()
     books2 = BookInfoManager()
 
