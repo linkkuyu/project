@@ -33,6 +33,9 @@ option 选项
 commit 
 completed 完成
 primary  key 外键
-
+exclude 排除
+contains 包含
+interpreter 翻译
+patterns 模式
 
 
