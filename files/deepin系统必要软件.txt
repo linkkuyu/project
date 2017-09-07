@@ -1,0 +1,17 @@
+TIM QQtm版
+sublime-3
+DBserver CE
+Bcloud 百度云盘linux版
+Remmina 远程连接工具
+FileZilla ftp连接工具
+SMplay 视频播放工具
+VLC 视频播放工具
+Mysql workstation 数据库连接工具
+VMware
+ultraiso 文本编辑器
+pycharm
+teamviewer
+亿图工具
+KolourPaint 画图工具
+XMind 思维导图
+Wireshark 网络抓取工具

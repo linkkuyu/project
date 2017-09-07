@@ -32,6 +32,7 @@ alter 修改
 option 选项
 commit 
 completed 完成
+primary  key 外键
 
 
 
