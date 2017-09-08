@@ -35,6 +35,15 @@ Transfer-Encoding: chunked
 query string 查询字符串  ？key1=value1&key2=value2&key2=value3
 
 
+git
+
+解决本地冲突，直接从服务器端拉取代码
+git fetch --all  
+git reset --hard origin/master 
+git pull
+
+
+
 django 
 
 虚拟环境： mkvirtualenv ,rmvirtualenv ,workon ,deactive

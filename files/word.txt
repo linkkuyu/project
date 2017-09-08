@@ -37,5 +37,9 @@ exclude 排除
 contains 包含
 interpreter 翻译
 patterns 模式
+general 常规的
+method
+query 查询
+dict 字典
 
 
