@@ -1,6 +1,6 @@
 #coding:utf-8
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse,HttpResponseRedirect
 # Create your views here.
 
 def index(request):
@@ -40,3 +40,19 @@ def postTest2(request):
     uhobby = request.POST.getlist('uhobby')
     context = {'uname':uname, 'upwd':upwd, 'ugender':ugender, 'uhobby':uhobby}
     return render(request, 'booktest/postTest2.html', context)
+
+#cookie练习
+def cookieTest(request):
+    response = HttpResponse()
+    cookie = request.COOKIES
+    if cookie.has_key('t1'):
+        response.write(cookie['t1'])
+
+    #response.set_cookie('t1', 'abc')
+    return response
+
+def redTest1(request):
+    return HttpResponseRedirect('/booktest/redTest2/')
+
+def redTest2(request):
+    return HttpResponse('这是重定向页面')
