@@ -1,5 +1,5 @@
 #coding:utf-8
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse,HttpResponseRedirect
 # Create your views here.
 
@@ -56,3 +56,17 @@ def redTest1(request):
 
 def redTest2(request):
     return HttpResponse('这是重定向页面')
+
+#通过用户登录练习session
+def session1(request):
+    uname = request.session.get('myname', '未登录')
+    context = {'uname':uname}
+    return render(request, 'booktest/session1.html/', context)
+
+def session2(request):
+    return render(request, 'booktest/session2.html')
+
+def session_handle(request):
+    uname = request.POST['uname']
+    request.session['myname'] = uname
+    return redirect('/booktest/session1/')
