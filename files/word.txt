@@ -41,5 +41,6 @@ general 常规的
 method
 query 查询
 dict 字典
+extend 继承，扩展
 
 

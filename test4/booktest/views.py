@@ -16,3 +16,25 @@ def show(request, id, id2):
 #练习模板的继承
 def index2(request):
     return render(request, 'booktest/index2.html')
+
+def user1(request):
+    context = {'uanme':'习总'}
+    return render(request, 'booktest/user1.html', context)
+
+def user2(request):
+    return render(request, 'booktest/user2.html')
+
+#html转义
+
+def htmlTest(request):
+    context = {'t1':'<h1>123<h1>'}
+    return render(request, 'booktest/htmlTest.html', context)
+
+#csrf
+def csrf1(request):
+    return render(request, 'booktest/csrf1.html')
+
+def csrf2(request):
+    uname = request.POST['uname']
+    context = {'uname':uname}
+    return render(request, 'booktest/csrf2.html', context)
