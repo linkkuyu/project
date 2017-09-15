@@ -9,6 +9,7 @@ urlpatterns = [
     url(r'^user2', views.user2, name='user2'),
     url(r'^htmlTest', views.htmlTest, name='htmlTest'),
     url(r'^csrf1', views.csrf1, name='csrf1'),
-    url(r'csrf2', views.csrf2, name='csrf2')
+    url(r'csrf2', views.csrf2, name='csrf2'),
+    url(r'^verifyCodes$', views.verifyCode),
 
 ]

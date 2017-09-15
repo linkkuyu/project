@@ -1,5 +1,5 @@
 #coding:utf-8
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponse
 from models import *
 
 def index(request):
@@ -38,3 +38,42 @@ def csrf2(request):
     uname = request.POST['uname']
     context = {'uname':uname}
     return render(request, 'booktest/csrf2.html', context)
+#验证码
+
+def verifyCode(request):
+    from PIL import Image, ImageDraw, ImageFont
+    import random
+    #创建背景色
+    bgColor = (random.randrange(50, 100), random.randrange(50, 100), 0)
+    #规定宽高
+    width = 100
+    height = 26
+    #创建画布
+    image = Image.new('RGB', (width, height), bgColor)
+    #构造字体对象
+    font = ImageFont.truetype('FreeSans.ttf', 25)
+    #创建画笔
+    draw = ImageDraw.Draw(image)
+    #穿件文本内容
+    text = '0123ABCD'
+    #逐个绘制字符
+    textTemp = ''
+    for i in range(4):
+        textTemp1 = text[random.randrange(0, len(text))]
+        textTemp+=textTemp1
+        draw.text(
+            (i*25, 0),
+            textTemp1,
+            (255, 255, 255),
+            font
+        )
+
+    request.session['code'] = textTemp
+    # draw.text((0,0), text, (255,255,255), font)
+    #保持到内存流中
+    import cStringIO
+    buf = cStringIO.StringIO()
+    image.save(buf,'png')
+    #将内存流中的内容输出到客户端
+    return HttpResponse(buf.getvalue(), 'image/png')
+
