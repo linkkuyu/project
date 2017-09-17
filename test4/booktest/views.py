@@ -51,7 +51,7 @@ def verifyCode(request):
     #创建画布
     image = Image.new('RGB', (width, height), bgColor)
     #构造字体对象
-    font = ImageFont.truetype('FreeSans.ttf', 25)
+    font = ImageFont.truetype('/usr/share/fonts/truetype/ttf-bitstream-vera/VeraMoBd.ttf', 25)
     #创建画笔
     draw = ImageDraw.Draw(image)
     #穿件文本内容
@@ -77,3 +77,5 @@ def verifyCode(request):
     #将内存流中的内容输出到客户端
     return HttpResponse(buf.getvalue(), 'image/png')
 
+def vervifyTest(request):
+    return render(request, 'booktest/vervifyTest.html')
