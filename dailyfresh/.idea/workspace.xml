@@ -104,8 +104,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="575" />
-    <option name="y" value="64" />
+    <option name="x" value="324" />
+    <option name="y" value="59" />
     <option name="width" value="829" />
     <option name="height" value="616" />
   </component>
@@ -465,7 +465,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="575" y="64" width="829" height="616" extended-state="1" />
+    <frame x="324" y="59" width="829" height="616" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22349936" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
