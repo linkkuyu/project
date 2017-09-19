@@ -30,4 +30,10 @@ def register_handle(request):
     #注册成功转到登录界面
     return redirect('/user/login')
 
+def login(request):
+    return render(request,'df_user/login.html')
+
+# def infor(request):
+
+
 
