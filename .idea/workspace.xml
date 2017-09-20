@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bb7c362e-3a66-4706-b2b8-07c5072358ea" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dailyfresh/df_user/models.py" afterPath="$PROJECT_DIR$/dailyfresh/df_user/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dailyfresh/df_user/urls.py" afterPath="$PROJECT_DIR$/dailyfresh/df_user/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dailyfresh/df_user/views.py" afterPath="$PROJECT_DIR$/dailyfresh/df_user/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dailyfresh/templates/base_foot.html" afterPath="$PROJECT_DIR$/dailyfresh/templates/base_foot.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dailyfresh/templates/df_user/register.html" afterPath="$PROJECT_DIR$/dailyfresh/templates/df_user/register.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test5/.idea/workspace.xml" afterPath="$PROJECT_DIR$/test5/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="bb7c362e-3a66-4706-b2b8-07c5072358ea" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,10 +15,10 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dailyfresh/df_user/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
+            <state relative-caret-position="102">
               <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding>
-                <marker date="1505743608819" expanded="true" signature="223:368" ph="..." />
+                <marker date="1505824827574" expanded="true" signature="223:368" ph="..." />
               </folding>
             </state>
           </provider>
@@ -44,7 +37,7 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dailyfresh/df_user/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
+            <state relative-caret-position="68">
               <caret line="5" column="4" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
@@ -58,7 +51,17 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
               <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding />
+              <folding>
+                <marker date="1505824827582" expanded="true" signature="525:1502" ph="..." />
+                <marker date="1505824827582" expanded="true" signature="582:1492" ph="..." />
+                <marker date="1505824827582" expanded="true" signature="628:1476" ph="..." />
+                <marker date="1505824827582" expanded="true" signature="638:775" ph="..." />
+                <marker date="1505824827582" expanded="true" signature="790:918" ph="..." />
+                <marker date="1505824827582" expanded="true" signature="928:1060" ph="..." />
+                <marker date="1505824827582" expanded="true" signature="1070:1198" ph="..." />
+                <marker date="1505824827582" expanded="true" signature="1226:1388" ph="..." />
+                <marker date="1505824827582" expanded="true" signature="1414:1466" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -126,8 +129,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="92" />
-    <option name="y" value="194" />
+    <option name="x" value="309" />
+    <option name="y" value="202" />
     <option name="width" value="931" />
     <option name="height" value="612" />
   </component>
@@ -149,7 +152,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -164,12 +167,12 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/dailyfresh" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
@@ -372,7 +375,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="92" y="194" width="931" height="612" extended-state="0" />
+    <frame x="309" y="202" width="931" height="612" extended-state="0" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18367347" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -713,7 +716,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -727,17 +729,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dailyfresh/df_user/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
+        <state relative-caret-position="102">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
-            <marker date="1505743608819" expanded="true" signature="223:368" ph="..." />
+            <marker date="1505824827574" expanded="true" signature="223:368" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dailyfresh/df_user/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
+        <state relative-caret-position="68">
           <caret line="5" column="4" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
@@ -764,7 +766,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1505824827582" expanded="true" signature="525:1502" ph="..." />
+            <marker date="1505824827582" expanded="true" signature="582:1492" ph="..." />
+            <marker date="1505824827582" expanded="true" signature="628:1476" ph="..." />
+            <marker date="1505824827582" expanded="true" signature="638:775" ph="..." />
+            <marker date="1505824827582" expanded="true" signature="790:918" ph="..." />
+            <marker date="1505824827582" expanded="true" signature="928:1060" ph="..." />
+            <marker date="1505824827582" expanded="true" signature="1070:1198" ph="..." />
+            <marker date="1505824827582" expanded="true" signature="1226:1388" ph="..." />
+            <marker date="1505824827582" expanded="true" signature="1414:1466" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
