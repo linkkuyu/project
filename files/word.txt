@@ -43,5 +43,9 @@ query 查询
 dict 字典
 extend 继承，扩展
 option 选项
+survey 概览
+register 注册
+
+
 
 
