@@ -94,4 +94,10 @@ example:
 	    books1 = models.Manager()
 	    books2 = BookInfoManager()
 	
+ssr addr     "server": "sg3.ssnice.club",
+
+
+
+
+
 

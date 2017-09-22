@@ -61,7 +61,7 @@ ROOT_URLCONF = 'BBS_Pro.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -111,3 +111,10 @@ SITE_ID = 1
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+# TEMPLATES_DIRS = (
+#     os.path.join(BASE_DIR, 'templates')
+# )
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static')
+)
