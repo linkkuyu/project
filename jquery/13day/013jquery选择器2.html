@@ -7,10 +7,22 @@
     <script type="text/javascript">
 
         $(function () {
-            $('#div1').next().css({color:'read'});
+            //next() 同级的下一个元素， nextAll()同级的下面所有的元素
+            //prev() 同级的上一个元素， prevAll()同级的上面所有的元素
 
 
+            $('#div').nextAll('p').css({color:'red'});
 
+            //选择上一级的父元素
+            $('#span01').parent().css({width:'100px',height:'100px',background:'gold'});
+
+            //选择离自己最近的一个元素，元素可以是父级也可以是子集
+            $('#span02').closest('div').css({width:'200px',height:'200px',background:'pink'});
+
+            // $('.list.li')不可以回到父级
+            //$('.list').children()可以回到父级
+            //原始的选择集不一样
+            $('.list').children().css({background:'gold',height:'30px',marginBottom:'10px'}).end().css({background:'green'});
 
 
         })
@@ -21,7 +33,31 @@
 <body>
 
     <div id="div">这是一个div标签</div>
+    <div>这是第二个div</div>
     <p>这是一个p元素</p>
+
+    <div id="div2">
+        <a href="#">百度网</a>
+        <span id="span01">span元素</span>
+    </div>
+
+    <div>
+        <p>
+            <a href="#">腾讯网</a>
+            <span id="span02">span元素</span>
+        </p>
+    </div>
+
+    <ul class="list">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+    </ul>
 
 </body>
 </html>
