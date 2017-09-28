@@ -1,0 +1,131 @@
+ls
+
+ifocifg 
+ifconfig
+
+/home/app/.local/bin
+
+/usr/local/sbin/python_bin
+
+
+user www www;
+worker_processes 4;
+worker_cpu_affinity 0001 0010 0100 1000;
+error_log  /yinpan/logs/nginx/nginx_error.log  crit;
+worker_rlimit_nofile 100001;
+worker_priority -10; 
+events    
+{        
+  use epoll;
+  multi_accept on;
+  worker_connections 90000;
+}
+http         
+{
+  include       mime.types;
+  default_type  application/octet-stream;
+    
+  server_names_hash_bucket_size 128;
+  client_header_buffer_size 32k;
+  large_client_header_buffers 4 32k;
+  client_max_body_size 80m;
+  server_tokens off;
+  sendfile on;
+  tcp_nopush     on;
+  keepalive_timeout 10;
+        client_header_timeout 10;
+        client_body_timeout 10;
+        reset_timedout_connection on;
+        send_timeout 10;
+        tcp_nodelay on;
+        open_file_cache max=100001 inactive=60s;
+        open_file_cache_valid 80s;
+        open_file_cache_min_uses 1;
+        autoindex off;
+        limit_conn_zone $binary_remote_addr zone=addr:5m;
+        limit_conn addr 100;
+
+  gzip    on;
+  gzip_min_length   1k;
+  gzip_buffers   4 8k;
+  gzip_proxied any;
+  gzip_http_version  1.1;
+  gzip_types   text/plain application/x-javascript text/css  application/xml;
+  gzip_disable "MSIE [1-6]\.";
+
+log_format  main      '$http_host '
+                      '$remote_addr - $remote_user [$time_local] '
+                      '"$request" $status $body_bytes_sent "$request_body" '
+                      '"$http_referer" "$http_user_agent" "$http_x_forwarded_for" '
+                      '$request_time '  
+                      '$upstream_response_time';
+
+  include site/*.conf;
+	}
+
+
+
+
+
+
+
+
+
+
+
+#######################elk代理
+
+server {
+    listen 80;
+    server_name elk.hc1973.com;
+    access_log /yinpan/logs/nginx/elk/access.log;
+    error_log /yinpan/logs/nginx/elk/error.log error;
+    location / {
+        proxy_pass http://192.168.1.215:8080;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+parity --jsonrpc-apis web3,eth,net,personal,parity,parity_set,traces,rpc,parity_accounts --jsonrpc-cors deb --force-ui --ui-interface 172.16.37.38 --ui-port 8180 --jsonrpc-hosts all
+
+
+parity --jsonrpc-apis web3,eth,net,personal,parity,parity_set,traces,rpc,parity_accounts --jsonrpc-cors "*"
+
+
+
+a = 1
+b = 2
+a,b
+c = a+b
+a = c-a
+b = c-a 
+
+awk '{print $1}' bbs_access.log| sort | uniq -c | sort -n -k 1 -r | head -n 10
+
+
+
+
+DROP       tcp  --  115.28.94.183        anywhere             tcp dpt:http
+DROP       tcp  --  101.90.124.45        anywhere             tcp dpt:http
+DROP       tcp  --  113.57.246.193       anywhere             tcp dpt:http
+DROP       tcp  --  111.56.5.41          anywhere             tcp dpt:http
+DROP       tcp  --  .                    anywhere             tcp dpt:http
+DROP       tcp  --  14.17.37.68          anywhere             tcp dpt:http
+DROP       tcp  --  114.242.250.208      anywhere             tcp dpt:http
+DROP       tcp  --  106.39.160.135       anywhere             tcp dpt:http
+DROP       tcp  --  101.251.141.36       anywhere             tcp dpt:http
+DROP       tcp  --  120.78.15.63         anywhere             tcp dpt:http
+DROP       tcp  --  106.14.179.199       anywhere             tcp dpt:http
+DROP       tcp  --  106.11.158.202       anywhere             tcp dpt:http
+
+
+
+
