@@ -43,6 +43,11 @@ git reset --hard origin/master
 git pull
 
 
+本地强制更新
+git push -u origin +master​
+
+
+
 
 django 
 

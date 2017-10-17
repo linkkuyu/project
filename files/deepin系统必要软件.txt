@@ -15,3 +15,16 @@ teamviewer
 KolourPaint 画图工具
 XMind 思维导图
 Wireshark 网络抓取工具
+shadowsocks-Qt5 ss翻墙工具
+HexChat irc协议聊天工具
+docker 安装完后  会出现镜像无法启动的问题。
+是新版systemd的问题，在GRUB_CMDLINE_LINUX_DEFAULT里增加systemd.legacy_systemd_cgroup_controller=yes就可以了。
+
+
+修改一下内核启动文件即可如下：
+vim /etc/default/grub
+
+GRUB_CMDLINE_LINUX_DEFAULT="systemd.legacy_systemd_cgroup_controller=yes"
+
+
+
