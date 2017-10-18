@@ -101,7 +101,10 @@ example:
 	
 ssr addr     "server": "sg3.ssnice.club",
 
-
+97.64.22.92
+443
+aes 256-cfb
+密码 YmE3MWFkN2
 
 
 
