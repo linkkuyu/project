@@ -1,0 +1,80 @@
+dockder常用命令：
+
+直接运行镜像
+docker run name
+运行交互式的容器
+docker run -i -t ubuntu:15.10 /bin/bash
+
+查看当前运行的容器
+docker ps 
+
+运行带sshd的镜像 并绑定宿主机22端口到镜像22端口 后台运行
+docker run -d -p 22:22 n3uz/centos6.9-ssh 
+
+也可以给docker命名 --name 参数
+docker run --name centos-sshd -d -p 10000:22 n3uz/centos6.9-ssh
+
+查看docker镜像的端口信息
+docker port name 
+
+查看容器运行进程
+docker top name
+
+查看docker镜像日志
+docker logs name
+打印docker镜像日志
+docker logs -f name
+
+查看docker 底层信息
+docker inspect name
+
+停止当前的容器
+docker stop name
+
+重启当前的容器
+docker restart name
+
+移除容器
+docker rm name
+
+列出当前系统的镜像
+docker images
+
+查找镜像
+docker search nginx
+
+获取镜像
+docker pull name
+
+更新镜像
+docker commit -m="has update" -a="runoob" e218edb10161 runoob/ubuntu:v2
+
+各个参数说明：
+-m:提交的描述信息
+-a:指定镜像作者
+e218edb10161：容器ID
+runoob/ubuntu:v2:指定要创建的目标镜像名
+
+设置镜像标签
+docker tag 860c279d2fec runoob/centos:dev
+
+网络端口映射：随机映射到主机的端口
+docker run -d -P training/webapp python app.py
+
+端口映射，固定端口映射 5000-->5000
+docker run -d -p 5000:5000 training/webapp python app.py
+
+端口映射，指定ip 
+docker run -d -p 127.0.0.1:5001:5002 training/webapp python app.py
+
+端口映射，指定协议
+docker run -d -p 127.0.0.1:5000:5000/udp training/webapp python app.py
+
+查看容器ip的方法
+docker inspect 容器ID或容器名 |grep '"IPAddress"'
+
+查看虚悬镜像
+docker images -f dangling=true
+
+
+
